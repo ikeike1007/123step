@@ -73,7 +73,7 @@ function studio_hero() {
 			$title = get_the_title( get_option( 'woocommerce_shop_page_id' ) );
 
 		} elseif ( 'posts' === get_option( 'show_on_front' ) && is_home() ) {
-			$title = __( 'Latest Posts', 'studio-pro' );
+			$title = __( 'Latest Posts', '123step' );
 
 		} elseif ( is_front_page() && ! is_home() ) {
 			$title = get_the_title( get_option( 'page_on_front' ) );
@@ -97,10 +97,10 @@ function studio_hero() {
 			$title = genesis_do_blog_template_heading();
 
 		} elseif ( is_search() ) {
-			$title = __( 'Search Results', 'studio-pro' );
+			$title = __( 'Search Results', '123step' );
 
 		} elseif ( is_404() ) {
-			$title = __( 'Page not found!', 'studio-pro' );
+			$title = __( 'Page not found!', '123step' );
 
 		} else {
 			$title = get_the_title();
@@ -133,7 +133,7 @@ function studio_hero() {
 			$subtitle = '';
 
 		} elseif ( 'posts' === get_option( 'show_on_front' ) && is_home() ) {
-			$subtitle = __( 'Showing the latest posts', 'studio-pro' );
+			$subtitle = __( 'Showing the latest posts', '123step' );
 
 		} elseif ( is_author() ) {
 			$subtitle = get_the_author_meta( 'intro_text', (int) get_query_var( 'author' ) );
@@ -148,7 +148,7 @@ function studio_hero() {
 			$subtitle = esc_html( get_the_excerpt( get_option( 'page_for_posts' ) ) );
 
 		} elseif ( is_search() ) {
-			$subtitle = __( 'Showing search results for: ', 'studio-pro' ) . get_search_query();
+			$subtitle = __( 'Showing search results for: ', '123step' ) . get_search_query();
 
 		} elseif ( has_excerpt() ) {
 			$subtitle = get_the_excerpt();

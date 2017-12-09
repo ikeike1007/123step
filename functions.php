@@ -14,17 +14,17 @@ define( 'GENESIS_LANGUAGES_DIR', get_stylesheet_directory() . '/languages/genesi
 define( 'GENESIS_LANGUAGES_URL', get_stylesheet_directory() . '/languages/genesis' );
 
 add_action( 'after_setup_theme', function() {
-    load_child_theme_textdomain( 'studio-pro', get_stylesheet_directory() . '/languages' );
+    load_child_theme_textdomain( '123step', get_stylesheet_directory() . '/languages' );
 });
 
 // Start the engine (do not remove).
 include_once( get_template_directory() . '/lib/init.php' );
 
 // Set Localization (do not remove).
-load_child_theme_textdomain( 'studio-pro', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'studio-pro' ) );
+load_child_theme_textdomain( '123step', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', '123step' ) );
 
 // Child theme (do not remove).
-define( 'CHILD_THEME_NAME', 'studio-pro' );
+define( 'CHILD_THEME_NAME', '123step' );
 define( 'CHILD_THEME_URL', 'http://www.seothemes.com/' );
 define( 'CHILD_THEME_VERSION', '2.1.3' );
 
@@ -61,7 +61,7 @@ add_theme_support( 'genesis-accessibility', array(
 
 // Rename primary and secondary navigation menus.
 add_theme_support( 'genesis-menus' , array(
-	'primary' => __( 'Header Menu', 'studio-pro' ),
+	'primary' => __( 'Header Menu', '123step' ),
 ) );
 
 // Enable menu wrap only, using custom wraps for everything else.
@@ -103,54 +103,54 @@ register_default_headers( array(
 	'child' => array(
 		'url'           => '%2$s/assets/images/hero.jpg',
 		'thumbnail_url' => '%2$s/assets/images/hero.jpg',
-		'description'   => __( 'Hero Image', 'studio-pro' ),
+		'description'   => __( 'Hero Image', '123step' ),
 	),
 ) );
 
 // Register front page widget areas.
 genesis_register_sidebar( array(
 	'id'          => 'front-page-1',
-	'name'        => __( 'Front Page 1', 'studio-pro' ),
-	'description' => __( 'Front page 1 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 1', '123step' ),
+	'description' => __( 'Front page 1 widget area.', '123step' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-2',
-	'name'        => __( 'Front Page 2', 'studio-pro' ),
-	'description' => __( 'Front page 2 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 2', '123step' ),
+	'description' => __( 'Front page 2 widget area.', '123step' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-3',
-	'name'        => __( 'Front Page 3', 'studio-pro' ),
-	'description' => __( 'Front page 3 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 3', '123step' ),
+	'description' => __( 'Front page 3 widget area.', '123step' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-4',
-	'name'        => __( 'Front Page 4', 'studio-pro' ),
-	'description' => __( 'Front page 4 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 4', '123step' ),
+	'description' => __( 'Front page 4 widget area.', '123step' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-5',
-	'name'        => __( 'Front Page 5', 'studio-pro' ),
-	'description' => __( 'Front page 5 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 5', '123step' ),
+	'description' => __( 'Front page 5 widget area.', '123step' ),
 ) );
 genesis_register_sidebar( array(
 	'id'          => 'front-page-6',
-	'name'        => __( 'Front Page 6', 'studio-pro' ),
-	'description' => __( 'Front page 6 widget area.', 'studio-pro' ),
+	'name'        => __( 'Front Page 6', '123step' ),
+	'description' => __( 'Front page 6 widget area.', '123step' ),
 ) );
 
 // Register before header widget area.
 genesis_register_sidebar( array(
 	'id'          => 'before-header',
-	'name'        => __( 'Before Header', 'studio-pro' ),
-	'description' => __( 'This is the before header section.', 'studio-pro' ),
+	'name'        => __( 'Before Header', '123step' ),
+	'description' => __( 'This is the before header section.', '123step' ),
 ) );
 
 // Register before footer widget area.
 genesis_register_sidebar( array(
 	'id'          => 'before-footer',
-	'name'        => __( 'Before Footer', 'studio-pro' ),
-	'description' => __( 'This is the before footer section.', 'studio-pro' ),
+	'name'        => __( 'Before Footer', '123step' ),
+	'description' => __( 'This is the before footer section.', '123step' ),
 ) );
 
 /**
@@ -264,7 +264,7 @@ function studio_enqueue_scripts_styles() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Muli:400,700|Montserrat:700', array(), CHILD_THEME_VERSION );
 
 	// Enqueue scripts.
-	wp_enqueue_script( 'studio-pro', get_stylesheet_directory_uri() . '/assets/scripts/min/studio-pro.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
+	wp_enqueue_script( '123step', get_stylesheet_directory_uri() . '/assets/scripts/min/studio-pro.min.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 
 	// Remove sub-menu animation and delay.
 	wp_deregister_script( 'superfish-args' );
@@ -275,9 +275,9 @@ function studio_enqueue_scripts_styles() {
 	wp_dequeue_style( 'simple-social-icons-font' );
 
 	// Localize responsive menus script.
-	wp_localize_script( 'studio-pro', 'genesis_responsive_menu', array(
-		'mainMenu'         => __( 'Menu', 'studio-pro' ),
-		'subMenu'          => __( 'Menu', 'studio-pro' ),
+	wp_localize_script( '123step', 'genesis_responsive_menu', array(
+		'mainMenu'         => __( 'Menu', '123step' ),
+		'subMenu'          => __( 'Menu', '123step' ),
 		'menuIconClass'    => null,
 		'subMenuIconClass' => null,
 		'menuClasses'      => array(

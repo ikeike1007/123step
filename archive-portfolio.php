@@ -60,7 +60,7 @@ function studio_filterable_portfolio() {
 		<?php if ( $terms ) { ?>
 		<div id="portfolio-cats" class="filter clearfix">
 			<div class="wrap">
-				<a href="#" class="active" data-filter="*"><?php esc_html_e( 'All', 'studio-pro' ); ?></a>
+				<a href="#" class="active" data-filter="*"><?php esc_html_e( 'All', '123step' ); ?></a>
 				<?php foreach ( $terms as $term ) : ?>
 				 	<a href='#' data-filter='.<?php echo esc_attr( $term->slug ); ?>'><?php echo esc_html( $term->name ); ?></a>
 				<?php endforeach; ?>

@@ -169,7 +169,7 @@ function studio_breadcrumb_args( $args ) {
 function studio_read_more() {
 	return sprintf( '&hellip; <a href="%s" class="more-link">%s</a>',
 		get_the_permalink(),
-		genesis_a11y_more_link( __( 'Read more', 'studio-pro' ) )
+		genesis_a11y_more_link( __( 'Read more', '123step' ) )
 	);
 }
 

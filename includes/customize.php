@@ -137,7 +137,7 @@ function studio_customize_register( $wp_customize ) {
 
 		// Format ID and label.
 		$setting = "studio_{$id}_color";
-		$label	 = ucwords( str_replace( '_', ' ', $id ) ) . __( ' Color', 'studio-pro' );
+		$label	 = ucwords( str_replace( '_', ' ', $id ) ) . __( ' Color', '123step' );
 
 		// Add color setting.
 		$wp_customize->add_setting(

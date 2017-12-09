@@ -72,7 +72,7 @@ theme/
 │   ├── sidebars.php
 │   └── woocommerce.php
 ├── languages/
-│   └── studio-pro.pot
+│   └── 123step.pot
 ├── templates/
 │   ├── page-builder.php
 │   ├── page-contact.php
@@ -99,12 +99,12 @@ Studio Pro uses [Gulp](http://gulpjs.com/) as a build tool and [npm](https://www
 
 ```php
 // Remove default stylesheet.
-wp_deregister_style( 'studio-pro' );
-wp_dequeue_style( 'studio-pro' );
+wp_deregister_style( '123step' );
+wp_dequeue_style( '123step' );
 
 // Load minified child theme stylesheet.
-wp_register_style( 'studio-pro', get_stylesheet_directory_uri() . '/assets/styles/min/style.min.css', array(), CHILD_THEME_VERSION );
-wp_enqueue_style( 'studio-pro' );
+wp_register_style( '123step', get_stylesheet_directory_uri() . '/assets/styles/min/style.min.css', array(), CHILD_THEME_VERSION );
+wp_enqueue_style( '123step' );
 ```
 
 Using the minified stylesheet changes the file path which will break the loading of icon fonts. To fix this, edit the `assets/styles/_fonts.scss` file and change `assets/` in the font URL's to `../../`. This is also the path you should use if loading any assets such as fonts or images in your theme.
